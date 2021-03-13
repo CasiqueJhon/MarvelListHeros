@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.prueba.tecnica.marvellistheros.features.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+
+        <action
+            android:id="@+id/mainToCharacters"
+            app:destination="@+id/charactersFragment" />
+        <action
+            android:id="@+id/mainTofavorite"
+            app:destination="@+id/favoriteFragment" />
+        <action
+            android:id="@+id/mainToDetail"
+            app:destination="@+id/detailsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/charactersFragment"
+        android:name="com.prueba.tecnica.marvellistheros.features.characters.presentation.CharactersFragment"
+        android:label="fragment_characters"
+        tools:layout="@layout/fragment_characters" />
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.prueba.tecnica.marvellistheros.features.favorites.presentation.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.prueba.tecnica.marvellistheros.features.details.presentation.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+
+        <argument
+            android:name="characterId"
+            android:defaultValue="0L"
+            app:argType="long" />
+
+    </fragment>
+
+</navigation>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MarvelListHeros</string>
+
+    <!-- menu -->
+    <string name="menu_refresh">Refresh</string>
+
+    <!-- characters -->
+    <string name="characters_title">Marvel Characters</string>
+    <string name="characters_placeholder_message">Something is wrong. \n\nCheck your internet connection.</string>
+    <string name="characters_added_favorite">Added to favorites!</string>
+
+    <!-- favorite -->
+    <string name="favorite_deleted">Deleted!</string>
+    <string name="favorite_title">Favorite Characters</string>
+    <string name="favorite_placeholder_message">You don\'t have any favorite characters yet.</string>
+
+    <!-- details -->
+    <string name="details_empty_title" />
+    <string name="details_no_description">No description.</string>
+    <string name="details_placeholder_message">Something is wrong. \n\nCheck your internet connection.</string>
+    <string name="details_added_favorites">Added to favorites!</string>
+    <string name="details_comics_title">Comics</string>
+    <string name="details_series_title">Series</string>
+</resources>

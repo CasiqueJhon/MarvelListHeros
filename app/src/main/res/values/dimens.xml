@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_smaller">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_regular">16dp</dimen>
+    <dimen name="margin_xlarger">64dp</dimen>
+
+    <dimen name="character_item_card_radius">4dp</dimen>
+    <dimen name="character_item_owner_image_size">40dp</dimen>
+    <dimen name="character_item_image_size">20dp</dimen>
+
+    <dimen name="placeholder_image_size">50dp</dimen>
+
+    <dimen name="view_size">1dp</dimen>
+</resources>
