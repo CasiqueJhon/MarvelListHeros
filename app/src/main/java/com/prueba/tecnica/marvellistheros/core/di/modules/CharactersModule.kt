@@ -9,8 +9,10 @@ import com.prueba.tecnica.marvellistheros.features.characters.domain.repository.
 import com.prueba.tecnica.marvellistheros.features.characters.presentation.CharactersFragment
 import com.prueba.tecnica.marvellistheros.features.characters.presentation.CharactersViewModel
 import dagger.Binds
+import dagger.Module
 import dagger.multibindings.IntoMap
 
+@Module
 abstract class CharactersModule {
 
     @Binds
