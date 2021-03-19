@@ -1,4 +1,7 @@
 package com.prueba.tecnica.marvellistheros.features.characters.domain.model
 
-class Character {
-}
+data class Character(
+    val id: Long,
+    val name: String,
+    val thumbnail: Thumbnail
+)

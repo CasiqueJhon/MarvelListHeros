@@ -3,17 +3,13 @@ package com.prueba.tecnica.marvellistheros.features.characters.domain.usecase
 import com.prueba.tecnica.marvellistheros.core.network.ResultWrapper
 import com.prueba.tecnica.marvellistheros.features.characters.domain.model.Character
 import com.prueba.tecnica.marvellistheros.features.characters.domain.repository.CharactersRepository
+import com.prueba.tecnica.marvellistheros.features.commons.domain.repository.ListModeRepository
 import javax.inject.Inject
 
 class SaveListModeUseCase @Inject constructor(
-        private val charactersRepository: CharactersRepository
+        private val listModeRepository: ListModeRepository
 ) {
-    suspend operator fun invoke(
-            apiKey: String,
-            hash: String,
-            ts: Long,
-            offset: Int
-    ): ResultWrapper<List<Character>> {
-        return charactersRepository.getCharacters(apiKey, hash, ts, offset)
+    suspend operator fun invoke(listMode: Boolean) {
+        return listModeRepository.saveListMode(listMode)
     }
 }

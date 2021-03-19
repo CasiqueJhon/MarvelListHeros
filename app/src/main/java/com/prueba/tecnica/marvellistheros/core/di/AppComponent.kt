@@ -1,7 +1,7 @@
 package com.prueba.tecnica.marvellistheros.core.di
 
 import android.app.Application
-import com.prueba.tecnica.marvellistheros.core.di.modules.CharactersModule
+import com.prueba.tecnica.marvellistheros.core.di.modules.*
 import com.prueba.tecnica.marvellistheros.core.di.provider.ViewModelProvider
 import dagger.BindsInstance
 import dagger.Component
@@ -9,7 +9,14 @@ import javax.inject.Singleton
 
 @Component(
         modules = [
-                CharactersModule::class
+                CharactersModule::class,
+        DetailsModule::class,
+        FavoriteModule::class,
+        NetworkModule::class,
+        CommonsModule::class,
+        CoreModule::class,
+        PersistenceModule::class,
+        PreferencesModule::class
         ]
 )
 @Singleton
