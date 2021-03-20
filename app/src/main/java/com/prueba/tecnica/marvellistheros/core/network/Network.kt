@@ -5,6 +5,7 @@ import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 import java.io.IOException
 
+@Suppress("TooGenericExceptionCaught")
 object Network {
 
     suspend fun <T> request(call: suspend () -> T): ResultWrapper<T> {

@@ -10,7 +10,7 @@ data class DetailInfoDto(
     val id: Long?,
     @SerializedName("title")
     val title: String?,
-    @SerializedName("thumbail")
+    @SerializedName("thumbnail")
     val thumbnail: ThumbnailDto
 )
 

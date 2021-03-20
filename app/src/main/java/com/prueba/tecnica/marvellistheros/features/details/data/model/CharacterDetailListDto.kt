@@ -14,7 +14,7 @@ data class CharacterDetailListDto(
     val total: Int?,
     @SerializedName("count")
     val count: Int?,
-    @SerializedName("resulst")
+    @SerializedName("results")
     val results: List<CharacterDetailDto>
 )
 

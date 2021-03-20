@@ -19,7 +19,7 @@ import com.prueba.tecnica.marvellistheros.features.characters.domain.model.Chara
 import com.prueba.tecnica.marvellistheros.features.commons.domain.model.Favorite
 import com.prueba.tecnica.marvellistheros.features.main.MainFragmentDirections
 
-
+@Suppress("TooManyFunctions")
 class CharactersFragment : BaseFragment(), SwipeRefreshLayout.OnRefreshListener {
 
     var viewModel: CharactersViewModel? = null

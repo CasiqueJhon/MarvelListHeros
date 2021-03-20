@@ -2,6 +2,7 @@ package com.prueba.tecnica.marvellistheros.features.details.data.model
 
 import com.google.gson.annotations.SerializedName
 import com.prueba.tecnica.marvellistheros.core.TwoWayMapper
+import com.prueba.tecnica.marvellistheros.features.details.domain.model.MarvelCharacterDetail
 import javax.inject.Inject
 
 data class MarvelCharacterDetailDto(
