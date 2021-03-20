@@ -15,7 +15,7 @@ data class CharacterDetailListDto(
     @SerializedName("count")
     val count: Int?,
     @SerializedName("results")
-    val results: List<CharacterDetailDto>
+    val items: List<CharacterDetailDto>
 )
 
 class CharacterDetailListDtoMapper @Inject constructor():
@@ -26,7 +26,7 @@ class CharacterDetailListDtoMapper @Inject constructor():
             limit = limit ?: 0,
             total = total ?:0,
             count = count ?: 0,
-            results = CharacterDetailDtoMapper().mapList(results)
+            results = CharacterDetailDtoMapper().mapList(items)
         )
     }
 
@@ -36,7 +36,7 @@ class CharacterDetailListDtoMapper @Inject constructor():
             limit = limit,
             total = total,
             count = count,
-            results = CharacterDetailDtoMapper().mapListReverse(results)
+            items = CharacterDetailDtoMapper().mapListReverse(results)
         )
     }
 }

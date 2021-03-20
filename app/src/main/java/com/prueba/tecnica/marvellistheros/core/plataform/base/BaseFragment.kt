@@ -15,9 +15,10 @@ open class BaseFragment: Fragment() {
     private val main: MainActivity get() = (activity as MainActivity)
     val navController: NavController? get() = main.navController
 
-    private val appComponent: AppComponent get() =
-        (activity?.application as AppComponentProvider).appComponent
-    val viewModelProvider: ViewModelProvider get() = appComponent
+    private val appComponent: AppComponent
+        get() = (activity?.application as AppComponentProvider).appComponent
+    val viewModelProvider: ViewModelProvider
+        get() = appComponent
 
     fun hideBackArrow() {
         if (activity is MainActivity) {
