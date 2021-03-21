@@ -8,15 +8,15 @@ import com.prueba.tecnica.marvellistheros.features.commons.domain.model.Favorite
 import com.prueba.tecnica.marvellistheros.features.favorites.domain.usecase.DeleteFavoriteUseCase
 import com.prueba.tecnica.marvellistheros.features.favorites.domain.usecase.GetFavoritesUseCase
 import com.prueba.tecnica.marvellistheros.features.favorites.domain.usecase.GetListModeUseCase
-import com.prueba.tecnica.marvellistheros.features.favorites.domain.usecase.SaveLisModeUseCase
+import com.prueba.tecnica.marvellistheros.features.favorites.domain.usecase.SaveListModeUseCase
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 open class FavoriteViewModel @Inject constructor(
-        private val getFavoritesUseCase: GetFavoritesUseCase,
-        private val deleteFavoriteUseCase: DeleteFavoriteUseCase,
-        private val saveListModeUseCase: SaveLisModeUseCase,
-        private val getLisModeUseCase: GetListModeUseCase
+    private val getFavoritesUseCase: GetFavoritesUseCase,
+    private val deleteFavoriteUseCase: DeleteFavoriteUseCase,
+    private val saveListModeUseCase: SaveListModeUseCase,
+    private val getLisModeUseCase: GetListModeUseCase
 ): ViewModel() {
 
         open val favorites: LiveData<List<Favorite>?> get() = _favorites

@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.prueba.tecnica.marvellistheros.features.main
 
 import android.os.Bundle
@@ -44,6 +46,7 @@ class MainFragment: BaseFragment() {
 }
 
 class MainAdapter(fm: FragmentManager) :
+
     FragmentStatePagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
     override fun getCount(): Int = 2

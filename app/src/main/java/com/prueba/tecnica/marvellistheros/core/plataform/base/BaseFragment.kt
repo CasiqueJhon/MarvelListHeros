@@ -16,7 +16,7 @@ open class BaseFragment: Fragment() {
     val navController: NavController? get() = main.navController
 
     private val appComponent: AppComponent
-        get() = (activity?.application as AppComponentProvider).appComponent
+      get() = (activity?.application as AppComponentProvider).appComponent
     val viewModelProvider: ViewModelProvider
         get() = appComponent
 

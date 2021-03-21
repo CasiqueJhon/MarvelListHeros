@@ -19,6 +19,7 @@ open class CharactersViewModel @Inject constructor(
     private val saveFavoriteUseCase: SaveFavoriteUseCase,
     private val saveListModeUseCase: SaveListModeUseCase,
     private val getListModeUseCase: GetListModeUseCase
+
 ) : ViewModel() {
 
     open val characters: LiveData<List<Character>?> get() = _characters
@@ -30,15 +31,15 @@ open class CharactersViewModel @Inject constructor(
     open val savedFavorite: LiveData<Long?> get() = _savedFavorite
     private val _savedFavorite = MutableLiveData<Long?>()
 
-    open val listMode: LiveData<Boolean?> get() = _listoMode
-    private val _listoMode = MutableLiveData<Boolean?>()
+    open val listMode: LiveData<Boolean?> get() = _listMode
+    private val _listMode = MutableLiveData<Boolean?>()
 
     open val savedListMode: LiveData<Unit?> get() = _savedListMode
     private val _savedListMode = MutableLiveData<Unit?>()
 
-    open fun getCharacters(apiKey: String, timestamp: Long, hash: String, offset: Int) {
+    open fun getCharacters(apikey: String, timestamp: Long, hash: String, offset: Int) {
         viewModelScope.launch {
-            when (val response = getCharactersUseCase.invoke(apiKey, hash, timestamp, offset)) {
+            when (val response = getCharactersUseCase.invoke(apikey, hash, timestamp, offset)) {
                 is ResultWrapper.Success -> {
                     _characters.value = response.value
                 }
@@ -66,8 +67,7 @@ open class CharactersViewModel @Inject constructor(
 
     open fun getListMode() {
         viewModelScope.launch {
-            _listoMode.value = getListModeUseCase()
+            _listMode.value = getListModeUseCase()
         }
     }
-
 }
